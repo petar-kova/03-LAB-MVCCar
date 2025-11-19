@@ -54,7 +54,7 @@ namespace MVCCar.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Color,ProductionYear,Price")] Car car)
+        public async Task<IActionResult> Create([Bind("Id,Name,Color,ProductionYear,Price,Manufacturer")] Car car)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MVCCar.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Color,ProductionYear,Price")] Car car)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Color,ProductionYear,Price,Manufacturer")] Car car)
         {
             if (id != car.Id)
             {
